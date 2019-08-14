@@ -15,7 +15,11 @@ class Businessfactory_Roihuntereasy_Block_Adminhtml_Admin extends Mage_Adminhtml
 
     public function getStoreBaseUrl()
     {
-        return Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB, true);
+        $storeId = Mage::app()
+            ->getWebsite(true)
+            ->getDefaultGroup()
+            ->getDefaultStoreId();
+        return Mage::app()->getStore($storeId)->getBaseUrl();
     }
 
     public function getStoreName()
