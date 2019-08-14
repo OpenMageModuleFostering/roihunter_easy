@@ -15,7 +15,8 @@
         var errors = "<?php echo($this->getMainItemEntry() ? $this->getMainItemEntry()->getErrors() : null); ?>";
         var creationState = "<?php echo($this->getMainItemEntry() ? $this->getMainItemEntry()->getCreationState() : null); ?>";
         var magentoMode = "<?php echo $this->getDevelopmentMode(); ?>";
-        
+        var pluginVersion = "magento_" + "<?php echo $this->getPluginVersion(); ?>";
+
         console.log("mode: " + magentoMode);
         console.log("baseUrl: " + storeUrl);
 
@@ -28,7 +29,8 @@
                         "storeCurrency": storeCurrency,
                         "storeLanguage": storeLanguage,
                         "storeCountry": storeCountry,
-                        "magentoMode": magentoMode,
+                        "storeMode": magentoMode,
+                        "pluginVersion": pluginVersion,
 
                         // Database part
                         "customerId": customerId,
