@@ -109,9 +109,6 @@ class Businessfactory_Roihuntereasy_Model_Cron extends Mage_Core_Model_Abstract
 
             foreach ($products as $_product) {
 
-                $xmlWriter->writeElement('store', $_product->getStoreId());
-//                $_product->setStoreId(Mage::app()->getStore());
-
                 switch ($_product->getTypeId()) {
                     case 'downloadable':
                         if ($_product->getPrice() <= 0) {
@@ -291,7 +288,7 @@ class Businessfactory_Roihuntereasy_Model_Cron extends Mage_Core_Model_Abstract
 
 //        $this->_logger->debug('gtin: ' . $_product->getEan());
         $xmlWriter->writeElement('g:mpn', $_product->getSku());
-        $xmlWriter->writeElement('display_ads_id', $_product->getSku());
+        $xmlWriter->writeElement('g:display_ads_id', $_product->getSku());
         if (strlen($_product->getEan()) > 7) {
             $xmlWriter->writeElement('g:gtin', $_product->getEan());
         }
