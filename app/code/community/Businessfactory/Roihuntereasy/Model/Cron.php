@@ -193,8 +193,8 @@ class Businessfactory_Roihuntereasy_Model_Cron extends Mage_Core_Model_Abstract
         // setting correct Product URL
         $collection->addUrlRewrite();
         $storeId = Mage::app()
-            ->getDefaultGroup()
-            ->getDefaultStoreId();
+            ->getDefaultStoreView()
+            ->getStoreId();
         $collection->setStoreId($storeId);
         Mage::app()->setCurrentStore($storeId);
 
