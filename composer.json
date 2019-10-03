@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/roihunter_easy",
+    "name": "OpenMageModuleFostering\/roihunter_easy",
     "type": "magento-module",
     "license": "AFL-3.0",
     "homepage": "",
     "description": "ROI Hunter Easy boost your eshop by Google Display remarketing campaigns. Set dynamic campaigns for free in 60 seconds. You only need Adwords Account.",
     "authors": [
-    {
-        "name": "ROI Hunter",
-        "email": "petr.skornok@b.cz"
-    }
-],
+        {
+            "name": "ROI Hunter",
+            "email": "petr.skornok@b.cz"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
